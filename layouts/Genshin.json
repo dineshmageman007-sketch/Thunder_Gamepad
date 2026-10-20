@@ -1,0 +1,871 @@
+{
+ "settings": {
+  "background": "#0b0b0d",
+  "haptics": true,
+  "rumble": true,
+  "opacity": 1,
+  "button": "#24242a",
+  "buttonBorder": "#45454f",
+  "square": "#34343b",
+  "squareBorder": "#7c7c85",
+  "active": "#2f8f5b",
+  "activeBorder": "#5fe39b"
+ },
+ "layout": [
+  {
+   "type": "stick",
+   "label": "",
+   "x": 16.1,
+   "y": 60.86,
+   "s": 40,
+   "mode": "left",
+   "keys": {
+    "up": "w",
+    "down": "s",
+    "left": "a",
+    "right": "d"
+   },
+   "page": "main",
+   "floating": true,
+   "w": 45,
+   "h": 80,
+   "id": "mx1v576s0",
+   "sens": 2.3
+  },
+  {
+   "type": "stick",
+   "label": "",
+   "x": 61,
+   "y": 61,
+   "s": 28,
+   "mode": "right",
+   "keys": {
+    "up": "w",
+    "down": "s",
+    "left": "a",
+    "right": "d"
+   },
+   "page": "main",
+   "floating": true,
+   "w": 45,
+   "h": 80,
+   "id": "xdjoc3fyv",
+   "sens": 2.25
+  },
+  {
+   "type": "button",
+   "label": "Attack (B)",
+   "x": 80.93,
+   "y": 73.43,
+   "s": 20,
+   "action": {
+    "kind": "pad",
+    "value": "B"
+   },
+   "page": "main",
+   "id": "033qszy7z"
+  },
+  {
+   "type": "button",
+   "label": "Jump (A)",
+   "x": 89.74,
+   "y": 59.5,
+   "s": 18.5,
+   "action": {
+    "kind": "pad",
+    "value": "A"
+   },
+   "page": "main",
+   "id": "2stc4kqz8"
+  },
+  {
+   "type": "button",
+   "label": "Skill",
+   "x": 73.21,
+   "y": 90.14,
+   "s": 18,
+   "action": {
+    "kind": "pad",
+    "value": "RT"
+   },
+   "page": "main",
+   "id": "cvm8kpok7"
+  },
+  {
+   "type": "button",
+   "label": "Burst (Y)",
+   "x": 63.72,
+   "y": 82.7,
+   "s": 17,
+   "action": {
+    "kind": "pad",
+    "value": "Y"
+   },
+   "page": "main",
+   "id": "gnvust3zk"
+  },
+  {
+   "type": "button",
+   "label": "Sprint",
+   "x": 87.99,
+   "y": 93.12,
+   "s": 26,
+   "action": {
+    "kind": "pad",
+    "value": "RB"
+   },
+   "page": "main",
+   "id": "kxxqeafwn"
+  },
+  {
+   "type": "button",
+   "label": "Interact (X)",
+   "x": 77.46,
+   "y": 43.33,
+   "s": 18,
+   "action": {
+    "kind": "pad",
+    "value": "X"
+   },
+   "page": "main",
+   "id": "eb43j3ng7"
+  },
+  {
+   "type": "button",
+   "label": "1 (↑)",
+   "x": 95,
+   "y": 10,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "UP"
+   },
+   "page": "main",
+   "shape": "rect",
+   "group": "party",
+   "id": "i8qxgsl5w"
+  },
+  {
+   "type": "button",
+   "label": "2 (→)",
+   "x": 95,
+   "y": 21,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "RIGHT"
+   },
+   "page": "main",
+   "shape": "rect",
+   "group": "party",
+   "id": "7zfpvtisn"
+  },
+  {
+   "type": "button",
+   "label": "4 (↓)",
+   "x": 95,
+   "y": 43,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "DOWN"
+   },
+   "page": "main",
+   "shape": "rect",
+   "group": "party",
+   "id": "akbdsvil2"
+  },
+  {
+   "type": "button",
+   "label": "3 (←)",
+   "x": 95,
+   "y": 32,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "LEFT"
+   },
+   "page": "main",
+   "shape": "rect",
+   "group": "party",
+   "id": "n3cbhdd29"
+  },
+  {
+   "type": "button",
+   "label": "Paimon",
+   "x": 4.5,
+   "y": 8,
+   "s": 13,
+   "action": {
+    "kind": "pad",
+    "value": "START"
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "rgmyrdn9q"
+  },
+  {
+   "type": "button",
+   "label": "Map",
+   "x": 4.5,
+   "y": 24,
+   "s": 13,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": -1
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "id": "kdvmhupc9"
+  },
+  {
+   "type": "button",
+   "label": "Bag",
+   "x": 32,
+   "y": 93,
+   "s": 9.5,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "id": "yx8zu883g"
+  },
+  {
+   "type": "button",
+   "label": "Chars",
+   "x": 54.45,
+   "y": 93.83,
+   "s": 9.5,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": 0.7071,
+      "y": -0.7071
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "id": "gdnscwo87"
+  },
+  {
+   "type": "button",
+   "label": "Event",
+   "x": 28,
+   "y": 8,
+   "s": 9.5,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": -1,
+      "y": 0
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "51nbou3rx"
+  },
+  {
+   "type": "button",
+   "label": "Pass",
+   "x": 33,
+   "y": 8,
+   "s": 9.5,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": -0.7071,
+      "y": 0.7071
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "qeudys9s3"
+  },
+  {
+   "type": "button",
+   "label": "Wish",
+   "x": 38,
+   "y": 8,
+   "s": 9.5,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "7jgmsd807"
+  },
+  {
+   "type": "button",
+   "label": "Book",
+   "x": 43,
+   "y": 8,
+   "s": 9.5,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": 0.7071,
+      "y": 0.7071
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "1z3trtt2d"
+  },
+  {
+   "type": "button",
+   "label": "Gadget",
+   "x": 2.5,
+   "y": 62,
+   "s": 9,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 120
+     },
+     {
+      "tap": "pad:B",
+      "ms": 80
+     },
+     {
+      "wait": 60
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "id": "rnh59ulv3"
+  },
+  {
+   "type": "button",
+   "label": "Quest",
+   "x": 4,
+   "y": 44,
+   "s": 11,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 700
+     },
+     {
+      "stick": "right",
+      "x": -0.7071,
+      "y": -0.7071
+     },
+     {
+      "wait": 350
+     },
+     {
+      "stick": "right",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "0g697h9do"
+  },
+  {
+   "type": "button",
+   "label": "Co-op",
+   "x": 57,
+   "y": 8,
+   "s": 9,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 120
+     },
+     {
+      "tap": "pad:RIGHT",
+      "ms": 80
+     },
+     {
+      "wait": 60
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "j1gtak9aw"
+  },
+  {
+   "type": "button",
+   "label": "👁️",
+   "x": 50,
+   "y": 8,
+   "s": 6,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "down": "pad:LB"
+     },
+     {
+      "wait": 120
+     },
+     {
+      "tap": "pad:LEFT",
+      "ms": 80
+     },
+     {
+      "wait": 60
+     },
+     {
+      "up": "pad:LB"
+     }
+    ]
+   },
+   "page": "main",
+   "id": "oq2b3jeos"
+  },
+  {
+   "type": "button",
+   "label": "LB",
+   "x": 12,
+   "y": 8,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "LB"
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "otvyaifqz"
+  },
+  {
+   "type": "button",
+   "label": "RB",
+   "x": 88,
+   "y": 8,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "RB"
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "cxy97etok"
+  },
+  {
+   "type": "button",
+   "label": "LT",
+   "x": 12,
+   "y": 22,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "LT"
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "bb0h7gz6r"
+  },
+  {
+   "type": "button",
+   "label": "RT",
+   "x": 88,
+   "y": 22,
+   "s": 10,
+   "action": {
+    "kind": "pad",
+    "value": "RT"
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "dw3jrueh2"
+  },
+  {
+   "type": "button",
+   "label": "LS",
+   "x": 18.5,
+   "y": 15,
+   "s": 12,
+   "action": {
+    "kind": "pad",
+    "value": "LS"
+   },
+   "page": "main",
+   "id": "n875oooem"
+  },
+  {
+   "type": "button",
+   "label": "RS",
+   "x": 81.5,
+   "y": 15,
+   "s": 12,
+   "action": {
+    "kind": "pad",
+    "value": "RS"
+   },
+   "page": "main",
+   "id": "u29ewopwc"
+  },
+  {
+   "type": "button",
+   "label": "Friends",
+   "x": 62,
+   "y": 8,
+   "s": 9,
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": "pad:START",
+      "ms": 80
+     },
+     {
+      "wait": 900
+     },
+     {
+      "stick": "left",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "stick": "left",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 300
+     },
+     {
+      "stick": "left",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "wait": 150
+     },
+     {
+      "stick": "left",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "wait": 300
+     },
+     {
+      "tap": "pad:B",
+      "ms": 80
+     }
+    ]
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "55yvhsuzy"
+  },
+  {
+   "type": "button",
+   "label": "Chat",
+   "x": 8.5,
+   "y": 92,
+   "s": 12,
+   "action": {
+    "kind": "pad",
+    "value": "BACK"
+   },
+   "page": "main",
+   "shape": "square",
+   "id": "072arlg3y",
+   "chatSeq": {
+    "then": [
+     "pad:B",
+     "pad:X"
+    ],
+    "send": "pad:B",
+    "close": "pad:A",
+    "keep": true
+   }
+  },
+  {
+   "type": "button",
+   "label": "Auto",
+   "x": 69.67,
+   "y": 9.96,
+   "s": 11.5,
+   "action": {
+    "kind": "autoclick",
+    "target": {
+     "kind": "pad",
+     "value": "B"
+    },
+    "min": 400,
+    "max": 900,
+    "holdMin": 28,
+    "holdMax": 85,
+    "pauses": true
+   },
+   "toggle": true,
+   "page": "main",
+   "id": "autoclk01"
+  },
+  {
+   "type": "button",
+   "label": "Walk",
+   "x": 20.5,
+   "y": 93,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "limit",
+    "stick": "left",
+    "radius": 0.4
+   },
+   "page": "main",
+   "id": "walklim01"
+  },
+  {
+   "type": "button",
+   "label": "Cinema",
+   "x": 43,
+   "y": 93.5,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "limit",
+    "stick": "right",
+    "radius": 0.3
+   },
+   "page": "main",
+   "id": "cinelim01"
+  }
+ ]
+}

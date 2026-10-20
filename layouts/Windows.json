@@ -1,0 +1,2491 @@
+{
+ "settings": {
+  "background": "#0b0b0d",
+  "haptics": true,
+  "rumble": true,
+  "opacity": 1
+ },
+ "layout": [
+  {
+   "type": "look",
+   "page": "main",
+   "x": 46,
+   "y": 58,
+   "w": 48,
+   "h": 66,
+   "mode": "mouse",
+   "sens": 2.6,
+   "tap": "left",
+   "hold": "right",
+   "holdMs": 450,
+   "label": "touchpad  (tap = click, hold = right click)",
+   "color": "#15151a",
+   "border": "#2c2c36",
+   "id": "w00"
+  },
+  {
+   "type": "look",
+   "page": "main",
+   "x": 76.5,
+   "y": 58,
+   "w": 8,
+   "h": 66,
+   "mode": "scroll",
+   "sens": 2,
+   "invertY": true,
+   "label": "scroll",
+   "color": "#15151a",
+   "border": "#2c2c36",
+   "id": "w01"
+  },
+  {
+   "type": "look",
+   "page": [
+    "keys",
+    "apps",
+    "media",
+    "magic"
+   ],
+   "x": 80,
+   "y": 60,
+   "w": 30,
+   "h": 56,
+   "mode": "mouse",
+   "sens": 2.6,
+   "tap": "left",
+   "hold": "right",
+   "holdMs": 450,
+   "label": "touchpad",
+   "color": "#15151a",
+   "border": "#2c2c36",
+   "id": "w02"
+  },
+  {
+   "type": "look",
+   "page": [
+    "keys",
+    "apps",
+    "media",
+    "magic"
+   ],
+   "x": 97,
+   "y": 60,
+   "w": 6,
+   "h": 56,
+   "mode": "scroll",
+   "sens": 2,
+   "invertY": true,
+   "label": "",
+   "color": "#15151a",
+   "border": "#2c2c36",
+   "id": "w03"
+  },
+  {
+   "type": "button",
+   "label": "Start",
+   "x": 5,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "cmd"
+   },
+   "page": "*",
+   "id": "w04"
+  },
+  {
+   "type": "button",
+   "label": "Tasks",
+   "x": 12,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+tab"
+   },
+   "page": "*",
+   "id": "w05"
+  },
+  {
+   "type": "button",
+   "label": "Desk",
+   "x": 19,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+d"
+   },
+   "page": "*",
+   "id": "w06"
+  },
+  {
+   "type": "button",
+   "label": "Alt⇥",
+   "x": 26,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "alt+tab"
+   },
+   "page": "*",
+   "id": "w07"
+  },
+  {
+   "type": "button",
+   "label": "Close",
+   "x": 33,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+w"
+   },
+   "page": "*",
+   "long": {
+    "action": {
+     "kind": "key",
+     "value": "alt+f4"
+    },
+    "ms": 600
+   },
+   "color": "#5a2a31",
+   "border": "#a8505c",
+   "id": "w08"
+  },
+  {
+   "type": "button",
+   "label": "Find",
+   "x": 40,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+s"
+   },
+   "page": "*",
+   "id": "w09"
+  },
+  {
+   "type": "button",
+   "label": "Main",
+   "x": 53,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "page",
+    "value": "main"
+   },
+   "page": "*",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w10"
+  },
+  {
+   "type": "button",
+   "label": "Keys",
+   "x": 60,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "page",
+    "value": "keys"
+   },
+   "page": "*",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w11"
+  },
+  {
+   "type": "button",
+   "label": "Apps",
+   "x": 67,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "page",
+    "value": "apps"
+   },
+   "page": "*",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w12"
+  },
+  {
+   "type": "button",
+   "label": "Media",
+   "x": 74,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "page",
+    "value": "media"
+   },
+   "page": "*",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w13"
+  },
+  {
+   "type": "button",
+   "label": "Magic",
+   "x": 81,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "page",
+    "value": "magic"
+   },
+   "page": "*",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w14"
+  },
+  {
+   "type": "button",
+   "label": "⌨",
+   "x": 88,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "chat",
+    "keep": true,
+    "open": {
+     "kind": "none"
+    },
+    "send": {
+     "kind": "key",
+     "value": "enter"
+    },
+    "close": {
+     "kind": "none"
+    }
+   },
+   "page": "*",
+   "color": "#1f4a35",
+   "border": "#3f9a6c",
+   "id": "w15"
+  },
+  {
+   "type": "button",
+   "label": "Esc",
+   "x": 95,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "esc"
+   },
+   "page": "*",
+   "id": "w16"
+  },
+  {
+   "type": "button",
+   "label": "◀",
+   "x": 6.5,
+   "y": 30,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouse",
+    "value": "x1"
+   },
+   "page": "main",
+   "id": "w17"
+  },
+  {
+   "type": "button",
+   "label": "▶",
+   "x": 6.5,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouse",
+    "value": "x2"
+   },
+   "page": "main",
+   "id": "w18"
+  },
+  {
+   "type": "button",
+   "label": "Esc",
+   "x": 6.5,
+   "y": 58,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "esc"
+   },
+   "page": "main",
+   "id": "w19"
+  },
+  {
+   "type": "button",
+   "label": "Enter",
+   "x": 6.5,
+   "y": 72,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "enter"
+   },
+   "page": "main",
+   "id": "w20"
+  },
+  {
+   "type": "button",
+   "label": "⌫",
+   "x": 6.5,
+   "y": 86,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "backspace"
+   },
+   "page": "main",
+   "id": "w21"
+  },
+  {
+   "type": "button",
+   "label": "Ctrl",
+   "x": 13.5,
+   "y": 30,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl"
+   },
+   "page": "main",
+   "toggle": true,
+   "id": "w22"
+  },
+  {
+   "type": "button",
+   "label": "Shift",
+   "x": 13.5,
+   "y": 44,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "shift"
+   },
+   "page": "main",
+   "toggle": true,
+   "id": "w23"
+  },
+  {
+   "type": "button",
+   "label": "Alt",
+   "x": 13.5,
+   "y": 58,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "alt"
+   },
+   "page": "main",
+   "toggle": true,
+   "id": "w24"
+  },
+  {
+   "type": "button",
+   "label": "Tab",
+   "x": 13.5,
+   "y": 72,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "tab"
+   },
+   "page": "main",
+   "id": "w25"
+  },
+  {
+   "type": "button",
+   "label": "Del",
+   "x": 13.5,
+   "y": 86,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "delete"
+   },
+   "page": "main",
+   "id": "w26"
+  },
+  {
+   "type": "button",
+   "label": "Write",
+   "x": 83.5,
+   "y": 28,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "chat",
+    "keep": false,
+    "open": {
+     "kind": "none"
+    },
+    "send": {
+     "kind": "none"
+    },
+    "close": {
+     "kind": "none"
+    }
+   },
+   "page": "main",
+   "color": "#1f4a35",
+   "border": "#3f9a6c",
+   "id": "w27"
+  },
+  {
+   "type": "button",
+   "label": "🎤",
+   "x": 83.5,
+   "y": 44,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+h"
+   },
+   "page": "main",
+   "id": "w28"
+  },
+  {
+   "type": "button",
+   "label": "2x",
+   "x": 83.5,
+   "y": 88,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": {
+       "kind": "mouse",
+       "value": "left"
+      },
+      "ms": 40
+     },
+     {
+      "wait": 70
+     },
+     {
+      "tap": {
+       "kind": "mouse",
+       "value": "left"
+      },
+      "ms": 40
+     }
+    ]
+   },
+   "page": "main",
+   "id": "w29"
+  },
+  {
+   "type": "button",
+   "label": "Drag",
+   "x": 90.5,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouse",
+    "value": "left"
+   },
+   "page": "main",
+   "toggle": true,
+   "color": "#3d2a5a",
+   "border": "#8a5fd0",
+   "id": "w30"
+  },
+  {
+   "type": "button",
+   "label": "Mid",
+   "x": 90.5,
+   "y": 44,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "mouse",
+    "value": "middle"
+   },
+   "page": "main",
+   "id": "w31"
+  },
+  {
+   "type": "button",
+   "label": "R",
+   "x": 90.5,
+   "y": 61,
+   "s": 13,
+   "shape": "round",
+   "action": {
+    "kind": "mouse",
+    "value": "right"
+   },
+   "page": "main",
+   "id": "w32"
+  },
+  {
+   "type": "button",
+   "label": "L",
+   "x": 90.5,
+   "y": 81,
+   "s": 17,
+   "shape": "round",
+   "action": {
+    "kind": "mouse",
+    "value": "left"
+   },
+   "page": "main",
+   "color": "#1f4a35",
+   "border": "#3f9a6c",
+   "id": "w33"
+  },
+  {
+   "type": "button",
+   "label": "L",
+   "x": 70,
+   "y": 93,
+   "s": 10,
+   "shape": "round",
+   "action": {
+    "kind": "mouse",
+    "value": "left"
+   },
+   "page": [
+    "keys",
+    "apps",
+    "media",
+    "magic"
+   ],
+   "color": "#1f4a35",
+   "border": "#3f9a6c",
+   "id": "w34"
+  },
+  {
+   "type": "button",
+   "label": "R",
+   "x": 81,
+   "y": 93,
+   "s": 10,
+   "shape": "round",
+   "action": {
+    "kind": "mouse",
+    "value": "right"
+   },
+   "page": [
+    "keys",
+    "apps",
+    "media",
+    "magic"
+   ],
+   "id": "w35"
+  },
+  {
+   "type": "button",
+   "label": "Drag",
+   "x": 92,
+   "y": 93,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "mouse",
+    "value": "left"
+   },
+   "page": [
+    "keys",
+    "apps",
+    "media",
+    "magic"
+   ],
+   "toggle": true,
+   "color": "#3d2a5a",
+   "border": "#8a5fd0",
+   "id": "w36"
+  },
+  {
+   "type": "button",
+   "label": "Copy",
+   "x": 8,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+c"
+   },
+   "page": "keys",
+   "id": "w37"
+  },
+  {
+   "type": "button",
+   "label": "Paste",
+   "x": 17,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+v"
+   },
+   "page": "keys",
+   "id": "w38"
+  },
+  {
+   "type": "button",
+   "label": "Cut",
+   "x": 26,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+x"
+   },
+   "page": "keys",
+   "id": "w39"
+  },
+  {
+   "type": "button",
+   "label": "Undo",
+   "x": 35,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+z"
+   },
+   "page": "keys",
+   "id": "w40"
+  },
+  {
+   "type": "button",
+   "label": "Redo",
+   "x": 44,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+y"
+   },
+   "page": "keys",
+   "id": "w41"
+  },
+  {
+   "type": "button",
+   "label": "All",
+   "x": 53,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+a"
+   },
+   "page": "keys",
+   "id": "w42"
+  },
+  {
+   "type": "button",
+   "label": "Save",
+   "x": 8,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+s"
+   },
+   "page": "keys",
+   "id": "w43"
+  },
+  {
+   "type": "button",
+   "label": "Find",
+   "x": 17,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+f"
+   },
+   "page": "keys",
+   "id": "w44"
+  },
+  {
+   "type": "button",
+   "label": "NewTab",
+   "x": 26,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+t"
+   },
+   "page": "keys",
+   "id": "w45"
+  },
+  {
+   "type": "button",
+   "label": "ClsTab",
+   "x": 35,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+w"
+   },
+   "page": "keys",
+   "color": "#5a2a31",
+   "border": "#a8505c",
+   "id": "w46"
+  },
+  {
+   "type": "button",
+   "label": "ReTab",
+   "x": 44,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+shift+t"
+   },
+   "page": "keys",
+   "id": "w47"
+  },
+  {
+   "type": "button",
+   "label": "F5",
+   "x": 53,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "f5"
+   },
+   "page": "keys",
+   "id": "w48"
+  },
+  {
+   "type": "button",
+   "label": "Tab►",
+   "x": 8,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+tab"
+   },
+   "page": "keys",
+   "id": "w49"
+  },
+  {
+   "type": "button",
+   "label": "◄Tab",
+   "x": 17,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+shift+tab"
+   },
+   "page": "keys",
+   "id": "w50"
+  },
+  {
+   "type": "button",
+   "label": "Addr",
+   "x": 26,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+l"
+   },
+   "page": "keys",
+   "id": "w51"
+  },
+  {
+   "type": "button",
+   "label": "Zoom+",
+   "x": 35,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+equals"
+   },
+   "page": "keys",
+   "turbo": 150,
+   "id": "w52"
+  },
+  {
+   "type": "button",
+   "label": "Zoom-",
+   "x": 44,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+minus"
+   },
+   "page": "keys",
+   "turbo": 150,
+   "id": "w53"
+  },
+  {
+   "type": "button",
+   "label": "Zoom0",
+   "x": 53,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+0"
+   },
+   "page": "keys",
+   "id": "w54"
+  },
+  {
+   "type": "button",
+   "label": "←",
+   "x": 8,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "left"
+   },
+   "page": "keys",
+   "turbo": 90,
+   "id": "w55"
+  },
+  {
+   "type": "button",
+   "label": "↑",
+   "x": 17,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "up"
+   },
+   "page": "keys",
+   "turbo": 90,
+   "id": "w56"
+  },
+  {
+   "type": "button",
+   "label": "↓",
+   "x": 26,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "down"
+   },
+   "page": "keys",
+   "turbo": 90,
+   "id": "w57"
+  },
+  {
+   "type": "button",
+   "label": "→",
+   "x": 35,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "right"
+   },
+   "page": "keys",
+   "turbo": 90,
+   "id": "w58"
+  },
+  {
+   "type": "button",
+   "label": "Tab",
+   "x": 44,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "tab"
+   },
+   "page": "keys",
+   "id": "w59"
+  },
+  {
+   "type": "button",
+   "label": "Enter",
+   "x": 53,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "enter"
+   },
+   "page": "keys",
+   "id": "w60"
+  },
+  {
+   "type": "button",
+   "label": "Home",
+   "x": 8,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "home"
+   },
+   "page": "keys",
+   "id": "w61"
+  },
+  {
+   "type": "button",
+   "label": "End",
+   "x": 17,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "end"
+   },
+   "page": "keys",
+   "id": "w62"
+  },
+  {
+   "type": "button",
+   "label": "PgUp",
+   "x": 26,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "page_up"
+   },
+   "page": "keys",
+   "id": "w63"
+  },
+  {
+   "type": "button",
+   "label": "PgDn",
+   "x": 35,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "page_down"
+   },
+   "page": "keys",
+   "id": "w64"
+  },
+  {
+   "type": "button",
+   "label": "⌫",
+   "x": 44,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "backspace"
+   },
+   "page": "keys",
+   "turbo": 70,
+   "id": "w65"
+  },
+  {
+   "type": "button",
+   "label": "Del",
+   "x": 53,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "delete"
+   },
+   "page": "keys",
+   "turbo": 70,
+   "id": "w66"
+  },
+  {
+   "type": "button",
+   "label": "Files",
+   "x": 8,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+e"
+   },
+   "page": "apps",
+   "id": "w67"
+  },
+  {
+   "type": "button",
+   "label": "Run",
+   "x": 17,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+r"
+   },
+   "page": "apps",
+   "id": "w68"
+  },
+  {
+   "type": "button",
+   "label": "Settings",
+   "x": 26,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+i"
+   },
+   "page": "apps",
+   "id": "w69"
+  },
+  {
+   "type": "button",
+   "label": "TaskMgr",
+   "x": 35,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+shift+esc"
+   },
+   "page": "apps",
+   "id": "w70"
+  },
+  {
+   "type": "button",
+   "label": "Lock",
+   "x": 44,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+l"
+   },
+   "page": "apps",
+   "color": "#5a2a31",
+   "border": "#a8505c",
+   "id": "w71"
+  },
+  {
+   "type": "button",
+   "label": "Notif",
+   "x": 53,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+n"
+   },
+   "page": "apps",
+   "id": "w72"
+  },
+  {
+   "type": "button",
+   "label": "Snip",
+   "x": 8,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+shift+s"
+   },
+   "page": "apps",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w73"
+  },
+  {
+   "type": "button",
+   "label": "Shot",
+   "x": 17,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+print_screen"
+   },
+   "page": "apps",
+   "id": "w74"
+  },
+  {
+   "type": "button",
+   "label": "Clip",
+   "x": 26,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+v"
+   },
+   "page": "apps",
+   "id": "w75"
+  },
+  {
+   "type": "button",
+   "label": "Emoji",
+   "x": 35,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+period"
+   },
+   "page": "apps",
+   "id": "w76"
+  },
+  {
+   "type": "button",
+   "label": "Voice",
+   "x": 44,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+h"
+   },
+   "page": "apps",
+   "id": "w77"
+  },
+  {
+   "type": "button",
+   "label": "Quick",
+   "x": 53,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+a"
+   },
+   "page": "apps",
+   "id": "w78"
+  },
+  {
+   "type": "button",
+   "label": "Snap◀",
+   "x": 8,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+left"
+   },
+   "page": "apps",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w79"
+  },
+  {
+   "type": "button",
+   "label": "Snap▶",
+   "x": 17,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+right"
+   },
+   "page": "apps",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w80"
+  },
+  {
+   "type": "button",
+   "label": "Max",
+   "x": 26,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+up"
+   },
+   "page": "apps",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w81"
+  },
+  {
+   "type": "button",
+   "label": "Min",
+   "x": 35,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+down"
+   },
+   "page": "apps",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w82"
+  },
+  {
+   "type": "button",
+   "label": "Monitor",
+   "x": 44,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+shift+right"
+   },
+   "page": "apps",
+   "id": "w83"
+  },
+  {
+   "type": "button",
+   "label": "Widget",
+   "x": 53,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+w"
+   },
+   "page": "apps",
+   "id": "w84"
+  },
+  {
+   "type": "button",
+   "label": "NewDsk",
+   "x": 8,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+win+d"
+   },
+   "page": "apps",
+   "color": "#3d2a5a",
+   "border": "#8a5fd0",
+   "id": "w85"
+  },
+  {
+   "type": "button",
+   "label": "Dsk◀",
+   "x": 17,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+win+left"
+   },
+   "page": "apps",
+   "color": "#3d2a5a",
+   "border": "#8a5fd0",
+   "id": "w86"
+  },
+  {
+   "type": "button",
+   "label": "Dsk▶",
+   "x": 26,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+win+right"
+   },
+   "page": "apps",
+   "color": "#3d2a5a",
+   "border": "#8a5fd0",
+   "id": "w87"
+  },
+  {
+   "type": "button",
+   "label": "DelDsk",
+   "x": 35,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+win+f4"
+   },
+   "page": "apps",
+   "color": "#5a2a31",
+   "border": "#a8505c",
+   "id": "w88"
+  },
+  {
+   "type": "button",
+   "label": "Project",
+   "x": 44,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+p"
+   },
+   "page": "apps",
+   "id": "w89"
+  },
+  {
+   "type": "button",
+   "label": "GameBar",
+   "x": 53,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+g"
+   },
+   "page": "apps",
+   "id": "w90"
+  },
+  {
+   "type": "button",
+   "label": "Tb 1",
+   "x": 8,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+1"
+   },
+   "page": "apps",
+   "id": "w91"
+  },
+  {
+   "type": "button",
+   "label": "Tb 2",
+   "x": 17,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+2"
+   },
+   "page": "apps",
+   "id": "w92"
+  },
+  {
+   "type": "button",
+   "label": "Tb 3",
+   "x": 26,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+3"
+   },
+   "page": "apps",
+   "id": "w93"
+  },
+  {
+   "type": "button",
+   "label": "Tb 4",
+   "x": 35,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+4"
+   },
+   "page": "apps",
+   "id": "w94"
+  },
+  {
+   "type": "button",
+   "label": "✉",
+   "x": 44,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "text",
+    "value": "your@email.com"
+   },
+   "page": "apps",
+   "id": "w95"
+  },
+  {
+   "type": "button",
+   "label": "☎",
+   "x": 53,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "text",
+    "value": "+91 00000 00000"
+   },
+   "page": "apps",
+   "id": "w96"
+  },
+  {
+   "type": "button",
+   "label": "⏮",
+   "x": 8,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "media_previous"
+   },
+   "page": "media",
+   "id": "w97"
+  },
+  {
+   "type": "button",
+   "label": "⏯",
+   "x": 17,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "media_play_pause"
+   },
+   "page": "media",
+   "color": "#1f4a35",
+   "border": "#3f9a6c",
+   "id": "w98"
+  },
+  {
+   "type": "button",
+   "label": "⏭",
+   "x": 26,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "media_next"
+   },
+   "page": "media",
+   "id": "w99"
+  },
+  {
+   "type": "button",
+   "label": "Mute",
+   "x": 35,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "media_volume_mute"
+   },
+   "page": "media",
+   "id": "w100"
+  },
+  {
+   "type": "button",
+   "label": "Vol-",
+   "x": 44,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "media_volume_down"
+   },
+   "page": "media",
+   "turbo": 120,
+   "id": "w101"
+  },
+  {
+   "type": "button",
+   "label": "Vol+",
+   "x": 53,
+   "y": 28,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "media_volume_up"
+   },
+   "page": "media",
+   "turbo": 120,
+   "id": "w102"
+  },
+  {
+   "type": "button",
+   "label": "-10s",
+   "x": 8,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "j"
+   },
+   "page": "media",
+   "id": "w103"
+  },
+  {
+   "type": "button",
+   "label": "Play",
+   "x": 17,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "k"
+   },
+   "page": "media",
+   "id": "w104"
+  },
+  {
+   "type": "button",
+   "label": "+10s",
+   "x": 26,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "l"
+   },
+   "page": "media",
+   "id": "w105"
+  },
+  {
+   "type": "button",
+   "label": "Full",
+   "x": 35,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "f"
+   },
+   "page": "media",
+   "id": "w106"
+  },
+  {
+   "type": "button",
+   "label": "M",
+   "x": 44,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "m"
+   },
+   "page": "media",
+   "id": "w107"
+  },
+  {
+   "type": "button",
+   "label": "CC",
+   "x": 53,
+   "y": 44,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "c"
+   },
+   "page": "media",
+   "id": "w108"
+  },
+  {
+   "type": "button",
+   "label": "Slow",
+   "x": 8,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "shift+comma"
+   },
+   "page": "media",
+   "id": "w109"
+  },
+  {
+   "type": "button",
+   "label": "Fast",
+   "x": 17,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "shift+period"
+   },
+   "page": "media",
+   "id": "w110"
+  },
+  {
+   "type": "button",
+   "label": "-5s",
+   "x": 26,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "left"
+   },
+   "page": "media",
+   "id": "w111"
+  },
+  {
+   "type": "button",
+   "label": "+5s",
+   "x": 35,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "right"
+   },
+   "page": "media",
+   "id": "w112"
+  },
+  {
+   "type": "button",
+   "label": "Theatre",
+   "x": 44,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "t"
+   },
+   "page": "media",
+   "id": "w113"
+  },
+  {
+   "type": "button",
+   "label": "Mini",
+   "x": 53,
+   "y": 60,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "i"
+   },
+   "page": "media",
+   "id": "w114"
+  },
+  {
+   "type": "button",
+   "label": "Slides",
+   "x": 8,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "f5"
+   },
+   "page": "media",
+   "color": "#1f4a35",
+   "border": "#3f9a6c",
+   "id": "w115"
+  },
+  {
+   "type": "button",
+   "label": "PgUp",
+   "x": 17,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "page_up"
+   },
+   "page": "media",
+   "id": "w116"
+  },
+  {
+   "type": "button",
+   "label": "PgDn",
+   "x": 26,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "page_down"
+   },
+   "page": "media",
+   "id": "w117"
+  },
+  {
+   "type": "button",
+   "label": "Black",
+   "x": 35,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "b"
+   },
+   "page": "media",
+   "id": "w118"
+  },
+  {
+   "type": "button",
+   "label": "Laser",
+   "x": 44,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+l"
+   },
+   "page": "media",
+   "id": "w119"
+  },
+  {
+   "type": "button",
+   "label": "End",
+   "x": 53,
+   "y": 76,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "esc"
+   },
+   "page": "media",
+   "color": "#5a2a31",
+   "border": "#a8505c",
+   "id": "w120"
+  },
+  {
+   "type": "button",
+   "label": "F11",
+   "x": 8,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "f11"
+   },
+   "page": "media",
+   "id": "w121"
+  },
+  {
+   "type": "button",
+   "label": "Mark",
+   "x": 17,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+d"
+   },
+   "page": "media",
+   "id": "w122"
+  },
+  {
+   "type": "button",
+   "label": "DevTools",
+   "x": 26,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "f12"
+   },
+   "page": "media",
+   "id": "w123"
+  },
+  {
+   "type": "button",
+   "label": "Print",
+   "x": 35,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+p"
+   },
+   "page": "media",
+   "id": "w124"
+  },
+  {
+   "type": "button",
+   "label": "History",
+   "x": 44,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+h"
+   },
+   "page": "media",
+   "id": "w125"
+  },
+  {
+   "type": "button",
+   "label": "Downl",
+   "x": 53,
+   "y": 92,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "ctrl+j"
+   },
+   "page": "media",
+   "id": "w126"
+  },
+  {
+   "type": "button",
+   "label": "↖",
+   "x": 8,
+   "y": 30,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.03,
+    "y": 0.04
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w127"
+  },
+  {
+   "type": "button",
+   "label": "↑",
+   "x": 17,
+   "y": 30,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.5,
+    "y": 0.04
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w128"
+  },
+  {
+   "type": "button",
+   "label": "↗",
+   "x": 26,
+   "y": 30,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.97,
+    "y": 0.04
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w129"
+  },
+  {
+   "type": "button",
+   "label": "←",
+   "x": 8,
+   "y": 47,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.03,
+    "y": 0.5
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w130"
+  },
+  {
+   "type": "button",
+   "label": "●",
+   "x": 17,
+   "y": 47,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.5,
+    "y": 0.5
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w131"
+  },
+  {
+   "type": "button",
+   "label": "→",
+   "x": 26,
+   "y": 47,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.97,
+    "y": 0.5
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w132"
+  },
+  {
+   "type": "button",
+   "label": "↙",
+   "x": 8,
+   "y": 64,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.03,
+    "y": 0.93
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w133"
+  },
+  {
+   "type": "button",
+   "label": "↓",
+   "x": 17,
+   "y": 64,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.5,
+    "y": 0.93
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w134"
+  },
+  {
+   "type": "button",
+   "label": "↘",
+   "x": 26,
+   "y": 64,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.97,
+    "y": 0.93
+   },
+   "page": "magic",
+   "color": "#233a5a",
+   "border": "#4a78b8",
+   "id": "w135"
+  },
+  {
+   "type": "button",
+   "label": "Taskbar",
+   "x": 8,
+   "y": 82,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "mouseto",
+    "x": 0.5,
+    "y": 0.985
+   },
+   "page": "magic",
+   "id": "w136"
+  },
+  {
+   "type": "button",
+   "label": "Clock",
+   "x": 17,
+   "y": 82,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "moveto": [
+       0.965,
+       0.985
+      ]
+     },
+     {
+      "wait": 60
+     },
+     {
+      "tap": {
+       "kind": "mouse",
+       "value": "left"
+      },
+      "ms": 50
+     }
+    ]
+   },
+   "page": "magic",
+   "id": "w137"
+  },
+  {
+   "type": "button",
+   "label": "ShowDsk",
+   "x": 26,
+   "y": 82,
+   "s": 10,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "moveto": [
+       0.998,
+       0.998
+      ]
+     },
+     {
+      "wait": 60
+     },
+     {
+      "tap": {
+       "kind": "mouse",
+       "value": "left"
+      },
+      "ms": 50
+     }
+    ]
+   },
+   "page": "magic",
+   "id": "w138"
+  },
+  {
+   "type": "button",
+   "label": "AltHold",
+   "x": 38,
+   "y": 30,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "alt"
+   },
+   "page": "magic",
+   "toggle": true,
+   "color": "#3d2a5a",
+   "border": "#8a5fd0",
+   "id": "w139"
+  },
+  {
+   "type": "button",
+   "label": "Tab",
+   "x": 47,
+   "y": 30,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "tab"
+   },
+   "page": "magic",
+   "id": "w140"
+  },
+  {
+   "type": "button",
+   "label": "Awake",
+   "x": 56,
+   "y": 30,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "autoclick",
+    "target": {
+     "kind": "key",
+     "value": "f15"
+    },
+    "min": 45000,
+    "max": 70000,
+    "holdMin": 28,
+    "holdMax": 85
+   },
+   "page": "magic",
+   "toggle": true,
+   "id": "awake",
+   "color": "#1f4a35",
+   "border": "#3f9a6c"
+  },
+  {
+   "type": "button",
+   "label": "SelLine",
+   "x": 38,
+   "y": 47,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": {
+       "kind": "key",
+       "value": "home"
+      },
+      "ms": 50
+     },
+     {
+      "tap": {
+       "kind": "key",
+       "value": "shift+end"
+      },
+      "ms": 50
+     }
+    ]
+   },
+   "page": "magic",
+   "id": "w142"
+  },
+  {
+   "type": "button",
+   "label": "SelWord",
+   "x": 47,
+   "y": 47,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": {
+       "kind": "key",
+       "value": "ctrl+left"
+      },
+      "ms": 50
+     },
+     {
+      "tap": {
+       "kind": "key",
+       "value": "ctrl+shift+right"
+      },
+      "ms": 50
+     }
+    ]
+   },
+   "page": "magic",
+   "id": "w143"
+  },
+  {
+   "type": "button",
+   "label": "DelLine",
+   "x": 56,
+   "y": 47,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": {
+       "kind": "key",
+       "value": "home"
+      },
+      "ms": 50
+     },
+     {
+      "tap": {
+       "kind": "key",
+       "value": "shift+end"
+      },
+      "ms": 50
+     },
+     {
+      "tap": {
+       "kind": "key",
+       "value": "delete"
+      },
+      "ms": 50
+     }
+    ]
+   },
+   "page": "magic",
+   "color": "#5a2a31",
+   "border": "#a8505c",
+   "id": "w144"
+  },
+  {
+   "type": "button",
+   "label": "Terminal",
+   "x": 38,
+   "y": 64,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": {
+       "kind": "key",
+       "value": "win+r"
+      },
+      "ms": 80
+     },
+     {
+      "wait": 500
+     },
+     {
+      "text": "wt"
+     },
+     {
+      "wait": 120
+     },
+     {
+      "tap": {
+       "kind": "key",
+       "value": "enter"
+      },
+      "ms": 60
+     }
+    ]
+   },
+   "page": "magic",
+   "id": "w145"
+  },
+  {
+   "type": "button",
+   "label": "CMD",
+   "x": 47,
+   "y": 64,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": {
+       "kind": "key",
+       "value": "win+r"
+      },
+      "ms": 80
+     },
+     {
+      "wait": 500
+     },
+     {
+      "text": "cmd"
+     },
+     {
+      "wait": 120
+     },
+     {
+      "tap": {
+       "kind": "key",
+       "value": "enter"
+      },
+      "ms": 60
+     }
+    ]
+   },
+   "page": "magic",
+   "id": "w146"
+  },
+  {
+   "type": "button",
+   "label": "IP",
+   "x": 56,
+   "y": 64,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "macro",
+    "steps": [
+     {
+      "tap": {
+       "kind": "key",
+       "value": "win+r"
+      },
+      "ms": 80
+     },
+     {
+      "wait": 500
+     },
+     {
+      "text": "cmd /k ipconfig"
+     },
+     {
+      "wait": 120
+     },
+     {
+      "tap": {
+       "kind": "key",
+       "value": "enter"
+      },
+      "ms": 60
+     }
+    ]
+   },
+   "page": "magic",
+   "id": "w147"
+  },
+  {
+   "type": "button",
+   "label": "Sleep",
+   "x": 38,
+   "y": 82,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "none"
+   },
+   "page": "magic",
+   "long": {
+    "action": {
+     "kind": "macro",
+     "steps": [
+      {
+       "tap": {
+        "kind": "key",
+        "value": "win+x"
+       },
+       "ms": 80
+      },
+      {
+       "wait": 500
+      },
+      {
+       "tap": {
+        "kind": "key",
+        "value": "u"
+       },
+       "ms": 60
+      },
+      {
+       "wait": 300
+      },
+      {
+       "tap": {
+        "kind": "key",
+        "value": "s"
+       },
+       "ms": 60
+      }
+     ]
+    },
+    "ms": 900
+   },
+   "color": "#5a2a31",
+   "border": "#a8505c",
+   "id": "w148"
+  },
+  {
+   "type": "button",
+   "label": "WinX",
+   "x": 47,
+   "y": 82,
+   "s": 11,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "win+x"
+   },
+   "page": "magic",
+   "id": "w149"
+  }
+ ]
+}

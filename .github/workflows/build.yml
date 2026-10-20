@@ -1,0 +1,78 @@
+name: Build Thunder Gamepad
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Accept Android SDK licences
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - name: Build debug APK
+        run: gradle :app:assembleDebug --no-daemon
+      - name: Name the APK
+        run: mv app/build/outputs/apk/debug/*.apk ThunderGamepad.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ThunderGamepad-apk
+          path: ThunderGamepad.apk
+
+  exe:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install build deps
+        shell: pwsh
+        run: |
+          pip install aiohttp pynput pyinstaller
+          Invoke-WebRequest https://files.pythonhosted.org/packages/source/v/vgamepad/vgamepad-0.1.0.tar.gz -OutFile vg.tar.gz
+          tar -xzf vg.tar.gz
+          $sp = python -c "import site; print(site.getsitepackages()[1])"
+          Copy-Item vgamepad-0.1.0\vgamepad $sp -Recurse
+          if (-not (Test-Path "$sp\vgamepad\win\vigem\client\x64\ViGEmClient.dll")) { throw "ViGEmClient.dll missing" }
+      - name: Build ThunderGamepad.exe
+        run: pyinstaller --onefile --noconsole --icon receiver/ThunderGamepad.ico --collect-all vgamepad --add-data "receiver/ui;ui" --name ThunderGamepad --paths receiver receiver/gui.py
+      - name: Self-test (starts the exe, checks the port answers)
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath .\dist\ThunderGamepad.exe -ArgumentList "--selftest" -Wait -PassThru -WorkingDirectory $PWD
+          if (Test-Path selftest.txt) { Get-Content selftest.txt }
+          if ($p.ExitCode -ne 0) { throw "exe self-test failed (exit $($p.ExitCode))" }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ThunderGamepad-exe
+          path: dist/ThunderGamepad.exe
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [apk, exe]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            out/ThunderGamepad.apk
+            out/ThunderGamepad.exe
