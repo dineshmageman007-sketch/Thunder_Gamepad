@@ -1,0 +1,65 @@
+/* PadLink play screen (scoped to #play; colours come from per-layout settings via CSS variables set by play.js) */
+#play{position:fixed;inset:0;z-index:50;background:var(--pbg,#0b0b0d);--btn:#24242a;--btn-b:#45454f;--sq:#34343b;--sq-b:#7c7c85;--on:#2f8f5b;--on-b:#5fe39b;--op:1;touch-action:none;overscroll-behavior:none}
+#play[hidden]{display:none}
+#stage,#edStage{position:absolute;inset:0}
+:is(#play,#editor) .el{position:absolute;z-index:1;transform:translate(-50%,-50%) rotate(var(--rot,0deg));touch-action:none;display:flex;align-items:center;justify-content:center;
+  text-align:center;line-height:1.05;font-weight:600;opacity:var(--op);
+  width:calc(var(--s)*1vmin);height:calc(var(--s)*1vmin/var(--ar,1));font-size:calc(var(--s)*.3vmin*var(--fs,1));
+  background:var(--bgc,var(--btn));border:2px solid var(--bc,var(--btn-b));color:var(--tc,#eee);border-radius:50%;overflow:hidden}
+:is(#play,#editor) .el.active{background:var(--on);border-color:var(--on-b)}
+:is(#play,#editor) .el.sel{border-color:var(--on-b)}
+:is(#play,#editor) .el.sq{background:var(--bgc,var(--sq));border-color:var(--bc,var(--sq-b));border-radius:12%}
+:is(#play,#editor) .el.sq.active{background:var(--on);border-color:var(--on-b)}
+:is(#play,#editor) .el.pill{border-radius:999px}
+:is(#play,#editor) .el.rect{border-radius:6px}
+:is(#play,#editor) .el.noshape{background:transparent;border-color:transparent}
+:is(#play,#editor) .el.ghost{background:transparent!important;border-color:transparent!important;color:transparent!important}
+:is(#play,#editor) .el.zone{width:calc(var(--w)*1%);height:calc(var(--h)*1%);border-radius:18px;background:rgba(255,255,255,.03);border:1px solid #26262c;font-size:4vmin;z-index:0;overflow:visible}
+:is(#play,#editor) .el.stick{background:#17171b;border-color:#3a3a42;font-weight:400}
+:is(#play,#editor) .el.stick.zone{background:rgba(255,255,255,.03);border-color:#26262c}
+:is(#play,#editor) .knob{position:absolute;left:50%;top:50%;width:46%;height:46%;border-radius:50%;background:#55555f;border:2px solid #777;transform:translate(-50%,-50%);pointer-events:none}
+:is(#play,#editor) .el.stick.active .knob,:is(#play,#editor) .fbase.on .knob{background:var(--on-b)}
+:is(#play,#editor) .fbase{position:absolute;display:none;border-radius:50%;background:#17171b;border:2px solid #3a3a42;transform:translate(-50%,-50%);pointer-events:none}
+:is(#play,#editor) .fbase.on{display:block}
+:is(#play,#editor) .stick .lbl{position:absolute;top:6%;font-size:calc(var(--s)*.12vmin);opacity:.5;pointer-events:none}
+:is(#play,#editor) .el.dpad,:is(#play,#editor) .el.dpad.active{background:transparent;border:0;border-radius:0}
+:is(#play,#editor) .dpad::before,:is(#play,#editor) .dpad::after{content:"";position:absolute;background:#34343b;border-radius:14%;pointer-events:none}
+:is(#play,#editor) .dpad::before{left:0;top:33%;width:100%;height:34%}
+:is(#play,#editor) .dpad::after{left:33%;top:0;width:34%;height:100%}
+:is(#play,#editor) .dpad .arr{position:absolute;z-index:1;transform:translate(-50%,-50%);font-size:calc(var(--s)*.13vmin);color:#aaa;pointer-events:none}
+:is(#play,#editor) .dpad .arr.on{color:var(--on-b)}
+:is(#play,#editor) .cross{font-size:10vmin;font-weight:300;opacity:.22;pointer-events:none}
+:is(#play,#editor) .el.slider{background:#17171b;border-color:#3a3a42;border-radius:14px;overflow:hidden}
+:is(#play,#editor) .el.slider .fill{position:absolute;background:var(--on);opacity:.8;pointer-events:none}
+:is(#play,#editor) .el.labelonly{pointer-events:none;background:transparent;border:0}
+:is(#play,#editor) .el.ui{opacity:.6;background:#1c1c21;border-color:#444;color:#ccc}
+:is(#play,#editor) .el.aiming{overflow:visible}
+:is(#play,#editor) .aimring{position:absolute;left:50%;top:50%;width:180%;height:180%;border-radius:50%;border:2px dashed #5fe39b;opacity:.7;transform:translate(-50%,-50%);pointer-events:none;display:none}
+:is(#play,#editor) .aimdot{position:absolute;left:50%;top:50%;width:46%;height:46%;border-radius:50%;background:#5fe39b;opacity:.85;transform:translate(-50%,-50%);pointer-events:none;display:none}
+:is(#play,#editor) .el.aiming .aimring,:is(#play,#editor) .el.aiming .aimdot{display:block}
+
+/* HUD pill */
+#hud{position:absolute;z-index:20;display:flex;flex-direction:column;align-items:stretch;min-width:92px;border-radius:18px;background:rgba(20,22,28,.78);border:1px solid rgba(255,255,255,.14);color:#dfe5ee;font:600 12px system-ui;opacity:.55;transition:opacity .15s;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);touch-action:none}
+#hud.open{opacity:1}
+#hud .grip{display:flex;align-items:center;gap:7px;padding:7px 12px;touch-action:none}
+#hud .grip i{width:9px;height:9px;border-radius:50%;background:#8a93a3;flex:none}
+#hud.on .grip i{background:#3ddc84;box-shadow:0 0 8px #3ddc84}
+#hud.busy .grip i{background:#ffb84d}
+#hud.bad .grip i{background:#ff5c6c}
+#hud .menu{display:flex;flex-direction:column;gap:6px;padding:4px 8px 9px}
+#hud .menu button{padding:9px 12px;border-radius:11px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:#eee;font:600 13px system-ui}
+#hud .menu button:active{background:rgba(255,255,255,.2)}
+#hud .menu .danger{color:#ff8a96}
+#hud .menu .warn{color:#ffb84d}
+#hud .pg{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#hud .pg b{flex:1;text-align:center;font-size:13px}
+#hud .pg button{width:38px;padding:7px 0}
+
+/* chat bar (top of the screen so the phone keyboard never covers it) */
+#chatbar{position:absolute;left:0;right:0;top:0;z-index:30;display:flex;gap:8px;padding:calc(8px + env(safe-area-inset-top)) 12px 8px;background:rgba(14,16,20,.96);border-bottom:1px solid #2a303b}
+#chatbar[hidden]{display:none}
+#chatbar input{flex:1;margin:0;padding:10px 12px}
+#chatbar button{padding:0 16px;border-radius:10px;border:1px solid #2a303b;background:#1d222b;color:#e8ecf3;font:600 14px system-ui}
+#chatbar #chatsend{background:#3ddc84;color:#06210f;border-color:#3ddc84}
+
+#chatbar.keep #chatx{order:-1;background:#5a2a31;border-color:#5a2a31;color:#fff}

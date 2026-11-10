@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Thunder Gamepad</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="play.css">
+<link rel="stylesheet" href="editor.css">
+</head>
+<body>
+<div id="app">
+  <nav id="rail">
+    <div class="brand" title="Thunder Gamepad"><svg viewBox="0 0 24 24"><path d="M7 8h10a4 4 0 0 1 4 4v1.5a3 3 0 0 1-5.4 1.8L15 14.5H9l-.6.8A3 3 0 0 1 3 13.500V12a4 4 0 0 1 4-4z"/></svg></div>
+    <button class="nav on" data-go="connect"><svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8.500 15.500a6 6 0 0 1 7 0"/><circle cx="12" cy="19" r="1.200"/></svg><span>Connect</span></button>
+    <button class="nav" data-go="library"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.500"/><rect x="13" y="4" width="7" height="7" rx="1.500"/><rect x="4" y="13" width="7" height="7" rx="1.500"/><rect x="13" y="13" width="7" height="7" rx="1.500"/></svg><span>Layouts</span></button>
+    <button class="nav" data-go="settings"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg><span>Settings</span></button>
+    <div class="grow"></div>
+    <div id="chip" class="chip off"><i></i><b>Offline</b></div>
+  </nav>
+
+  <main>
+    <!-- CONNECT -->
+    <section id="connect" class="screen on">
+      <header><h1>Connect to your PC</h1><p>Run the receiver on your laptop, then pick it below.</p></header>
+      <div id="cont"></div>
+      <div class="cols">
+        <div class="card">
+          <h2>Laptop</h2>
+          <div class="row"><button id="find" class="btn">Find automatically</button><span id="findNote" class="muted"></span></div>
+          <div id="found" class="list"></div>
+          <details class="adv"><summary>Type the PC address yourself</summary>
+          <div class="grid2">
+            <label>Address<input id="host" inputmode="decimal" placeholder="192.168.1.20" autocomplete="off"></label>
+            <label>Port<input id="port" inputmode="numeric" placeholder="8766"></label>
+          </div>
+          </details>
+          <p class="muted" id="hint">First time: tap your PC above, then click <b>Allow</b> in the Thunder Gamepad window on the PC. After that this app connects by itself.</p>
+          <button id="go" class="btn primary big">Connect</button>
+          <div id="err" class="err"></div>
+        </div>
+        <div class="card">
+          <h2>Controller type</h2>
+          <p class="muted">What the PC sees. You can switch while connected.</p>
+          <div id="padseg" class="seg">
+            <button data-pad="xbox">Xbox 360</button>
+            <button data-pad="ds4">DualShock 4</button>
+            <button data-pad="none">Keys + mouse</button>
+          </div>
+          <h2 class="mt">Quick test</h2>
+          <p class="muted">Checks the whole chain once connected.</p>
+          <div class="row wrap">
+            <button class="btn test" data-test="a">Press A</button>
+            <button class="btn test" data-test="space">Space key</button>
+            <button class="btn test" data-test="mouse">Nudge mouse</button>
+          </div>
+          <div id="stat" class="stat"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYOUTS -->
+    <section id="library" class="screen">
+      <header class="split"><div><h1>Layouts</h1><p>One layout per game. Tap to play.</p></div>
+        <div class="row"><button id="newLayout" class="btn">New</button><button id="importLayout" class="btn">Import</button></div></header>
+      <div class="row" id="presetRow" style="margin:0 0 12px"><button class="btn" data-preset="xbox">+ Xbox 360 layout</button><button class="btn" data-preset="ps">+ PlayStation layout</button></div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings" class="screen">
+      <header><h1>Settings</h1></header>
+      <div class="card narrow" id="setList"></div>
+    </section>
+  </main>
+</div>
+<div id="play" hidden>
+  <div id="stage"></div>
+  <div id="hud"></div>
+  <div id="chatbar" hidden>
+    <input id="chatin" type="text" enterkeyhint="send" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type here - it goes into the game chat">
+    <button id="chatsend">Send</button><button id="chatx">&#10005;</button>
+  </div>
+</div>
+<div id="editor" hidden>
+  <div id="edStage"></div>
+  <div id="edHandle" hidden></div>
+  <div id="edBar">
+    <div class="r1">
+      <div id="edGrip" title="Drag to move">⠿</div>
+      <button id="edDone" class="eb">‹ Done</button>
+      <button id="edAdd" class="eb">＋ Add</button>
+      <button id="edUndo" class="eb" title="Undo">↶</button><button id="edRedo" class="eb" title="Redo">↷</button>
+      <button id="edSnap" class="eb">Snap off</button>
+      <button id="edPanel" class="eb" title="Layout &amp; theme">☰</button>
+      <button id="edPlay" class="eb pri">▶ Play</button>
+    </div>
+    <div id="edTabs"></div>
+  </div>
+  <div id="edAddMenu" hidden></div>
+  <div id="edDrawer" hidden></div>
+</div>
+<div id="toast"></div>
+<script src="dlg.js"></script>
+<script src="engine.js"></script>
+<script src="link.js"></script>
+<script src="presets.js"></script>
+<script src="app.js"></script>
+<script src="play.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,456 @@
+{
+ "settings": {
+  "background": "#0b0b0d",
+  "haptics": true,
+  "rumble": true,
+  "opacity": 1,
+  "button": "#24242a",
+  "buttonBorder": "#45454f",
+  "square": "#34343b",
+  "squareBorder": "#7c7c85",
+  "active": "#2f8f5b",
+  "activeBorder": "#5fe39b"
+ },
+ "layout": [
+  {
+   "page": "main",
+   "type": "look",
+   "x": 50.04,
+   "y": 88.18,
+   "w": 100,
+   "h": 100,
+   "sens": 5.8,
+   "tap": "left",
+   "hold": "right",
+   "holdMs": 300,
+   "id": "x04bluzha",
+   "label": "",
+   "mode": "mouse"
+  },
+  {
+   "page": "main",
+   "type": "stick",
+   "mode": "keys",
+   "dpad": true,
+   "keys": {
+    "up": "w",
+    "down": "s",
+    "left": "a",
+    "right": "d"
+   },
+   "x": 16.65,
+   "y": 67.76,
+   "s": 40,
+   "label": "",
+   "id": "ff5grw1fc",
+   "floating": false,
+   "w": 45,
+   "h": 80,
+   "opacity": 1,
+   "rotate": 0,
+   "fontSize": 1.55
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "Run",
+   "x": 76.42,
+   "y": 92.71,
+   "s": 11,
+   "toggle": true,
+   "action": {
+    "kind": "key",
+    "value": "ctrl"
+   },
+   "id": "0p36vih47"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "↑",
+   "x": 89.74,
+   "y": 55.86,
+   "s": 30.5,
+   "action": {
+    "kind": "key",
+    "value": "space"
+   },
+   "id": "1448t3xwr"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "Sneak",
+   "x": 72.94,
+   "y": 78.1,
+   "s": 11,
+   "toggle": true,
+   "action": {
+    "kind": "key",
+    "value": "shift"
+   },
+   "id": "y07bjxtu5"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "◀",
+   "x": 5,
+   "y": 24,
+   "s": 11.5,
+   "shape": "square",
+   "action": {
+    "kind": "mouse",
+    "value": "scrollup"
+   },
+   "id": "15b7oz9j3"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "▶",
+   "x": 95,
+   "y": 24,
+   "s": 11.5,
+   "shape": "square",
+   "action": {
+    "kind": "mouse",
+    "value": "scrolldown"
+   },
+   "id": "lc1eaorxb"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "Drop",
+   "x": 18.36,
+   "y": 17.38,
+   "s": 11.5,
+   "action": {
+    "kind": "key",
+    "value": "q"
+   },
+   "id": "2z8tbzkkj"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "Chat",
+   "x": 3.06,
+   "y": 81.08,
+   "s": 10,
+   "shape": "rect",
+   "goto": "menu",
+   "action": {
+    "kind": "chat",
+    "keep": true,
+    "close": {
+     "kind": "macro",
+     "steps": [
+      {
+       "tap": "key:esc",
+       "ms": 60
+      },
+      {
+       "wait": 150
+      },
+      {
+       "tap": "key:esc",
+       "ms": 60
+      }
+     ]
+    }
+   },
+   "id": "a2jq0vkc1"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "...",
+   "x": 69,
+   "y": 93,
+   "s": 7.5,
+   "shape": "square",
+   "goto": "menu",
+   "action": {
+    "kind": "key",
+    "value": "e"
+   },
+   "id": "rq7he3ybg"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "II",
+   "x": 95,
+   "y": 9,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "esc"
+   },
+   "id": "mxcgkp9ls"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "1",
+   "x": 30,
+   "y": 93,
+   "s": 8.5,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "1"
+   },
+   "id": "gsinzd9n0"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "2",
+   "x": 34.25,
+   "y": 93,
+   "s": 8.5,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "2"
+   },
+   "id": "3ti8c8pdd"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "3",
+   "x": 38.5,
+   "y": 93,
+   "s": 8.5,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "3"
+   },
+   "id": "vh81jjdla"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "4",
+   "x": 42.75,
+   "y": 93,
+   "s": 8,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "4"
+   },
+   "id": "jxep5b04i"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "5",
+   "x": 47,
+   "y": 93,
+   "s": 8,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "5"
+   },
+   "id": "jk1i9n0yn"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "6",
+   "x": 51.25,
+   "y": 93,
+   "s": 8,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "6"
+   },
+   "id": "dul86lr39"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "7",
+   "x": 55.5,
+   "y": 93,
+   "s": 8,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "7"
+   },
+   "id": "3c7c5kwvm"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "8",
+   "x": 59.75,
+   "y": 93,
+   "s": 8,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "8"
+   },
+   "id": "kd9xxtaew"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "9",
+   "x": 64,
+   "y": 93,
+   "s": 8,
+   "shape": "rect",
+   "group": "hotbar",
+   "action": {
+    "kind": "key",
+    "value": "9"
+   },
+   "id": "3sdzm0z1l"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "Emote",
+   "x": 11.08,
+   "y": 8.99,
+   "s": 9,
+   "shape": "square",
+   "goto": "menu",
+   "action": {
+    "kind": "key",
+    "value": "b"
+   },
+   "id": "3lp4ct5mu"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "view",
+   "x": 74.48,
+   "y": 9.79,
+   "s": 10.5,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "tab"
+   },
+   "id": "1m3d84043"
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "HUD",
+   "x": 84.86,
+   "y": 8.43,
+   "s": 9,
+   "shape": "square",
+   "action": {
+    "kind": "key",
+    "value": "f1"
+   },
+   "id": "knbwnebt2"
+  },
+  {
+   "type": "button",
+   "label": "left",
+   "x": 12,
+   "y": 35,
+   "s": 12,
+   "action": {
+    "kind": "mouse",
+    "value": "left"
+   },
+   "page": "main",
+   "id": "wrtjmi2i3"
+  },
+  {
+   "type": "button",
+   "label": "right",
+   "x": 19,
+   "y": 35,
+   "s": 12,
+   "action": {
+    "kind": "mouse",
+    "value": "right"
+   },
+   "page": "main",
+   "id": "2b6tq40by"
+  },
+  {
+   "type": "button",
+   "label": "shift",
+   "x": 66.07,
+   "y": 15.38,
+   "s": 21,
+   "action": {
+    "kind": "key",
+    "value": "shift"
+   },
+   "page": "main",
+   "id": "eyr3rqme3",
+   "shape": "square"
+  },
+  {
+   "type": "button",
+   "label": "🔙",
+   "x": 5.03,
+   "y": 8.69,
+   "s": 9,
+   "action": {
+    "kind": "key",
+    "value": "esc"
+   },
+   "page": "main",
+   "id": "efmf95m2n",
+   "shape": "square"
+  },
+  {
+   "type": "look",
+   "x": 77.58,
+   "y": 8.12,
+   "w": 60,
+   "h": 60,
+   "page": "main",
+   "id": "63hyeevbx",
+   "label": "",
+   "mode": "mouse",
+   "sens": 5.8,
+   "tap": "right",
+   "hold": "left",
+   "holdMs": 220
+  },
+  {
+   "page": "main",
+   "type": "button",
+   "label": "Drop",
+   "x": 56.05,
+   "y": 11.11,
+   "s": 11.5,
+   "action": {
+    "kind": "key",
+    "value": "q"
+   },
+   "id": "bsah2r4yo"
+  }
+ ]
+}

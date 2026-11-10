@@ -1,0 +1,53 @@
+/* PadLink editor (element styles are shared with the play screen via play.css) */
+#editor{position:fixed;inset:0;z-index:60;background:var(--pbg,#0b0b0d);--btn:#24242a;--btn-b:#45454f;--sq:#34343b;--sq-b:#7c7c85;--on:#2f8f5b;--on-b:#5fe39b;--op:1;touch-action:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:10% 10%}
+#editor[hidden]{display:none}
+#editor .el{outline:2px dashed rgba(255,210,74,.45);outline-offset:3px}
+#editor .el.selected{outline:2px solid #ffd24a}
+#editor .el.ghost{border-color:#666!important;color:#888!important}
+#editor .el.labelonly{pointer-events:auto;border:1px dashed #666}
+#editor .el.zone{z-index:0}
+#edHandle{position:fixed;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#ffd24a;border:2px solid #000;z-index:70;touch-action:none}
+#edHandle[hidden]{display:none}
+
+#edBar{position:absolute;left:8px;top:calc(6px + env(safe-area-inset-top));z-index:95;width:min(50vw,440px);min-width:300px;display:flex;flex-direction:column;gap:5px;padding:6px;border-radius:14px;background:rgba(14,16,20,.94);border:1px solid #2a303b;box-shadow:0 6px 22px rgba(0,0,0,.55);color:#e8ecf3;font:600 13px system-ui}
+#edBar .r1{display:flex;gap:4px;align-items:stretch}
+#edBar .eb{flex:1 1 auto;padding:7px 3px;text-align:center;white-space:nowrap}
+#edGrip{flex:none;width:30px;display:grid;place-items:center;border-radius:9px;background:#161a21;border:1px solid #2a303b;color:#8a93a3;font-size:17px;touch-action:none;cursor:grab}
+#edGrip:active{background:#1f5f3d;color:#fff}
+#edTabs{flex:none;min-width:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+#edTabs::-webkit-scrollbar{display:none}
+.tab{flex:none;padding:6px 12px;border-radius:9px;border:1px solid #2a303b;background:#161a21;color:#9aa3b2;font:600 13px system-ui}
+.tab.on{background:#1f5f3d;border-color:#3ddc84;color:#fff}
+.eb{flex:none;padding:7px 11px;border-radius:9px;border:1px solid #2a303b;background:#1d222b;color:#e8ecf3;font:600 13px system-ui}
+.eb:active{filter:brightness(1.4)}.eb:disabled{opacity:.35}
+.eb.pri{background:#3ddc84;border-color:#3ddc84;color:#06210f}
+.eb.danger{color:#ff8a96}
+#edAddMenu{position:absolute;z-index:96;top:60px;left:8px;display:flex;flex-direction:column;gap:4px;padding:6px;border-radius:12px;background:rgba(20,24,31,.97);border:1px solid #2a303b}
+#edAddMenu[hidden]{display:none}
+#edAddMenu button{padding:10px 18px;border-radius:9px;border:0;background:#1d222b;color:#e8ecf3;font:600 14px system-ui;text-align:left}
+
+#edDrawer{position:absolute;z-index:85;right:0;top:0;bottom:0;width:min(310px,46vw);overflow-y:auto;background:rgba(18,21,27,.97);border-left:1px solid #2a303b;color:#e8ecf3;font:14px/1.35 system-ui;transition:opacity .12s;touch-action:pan-y;padding-bottom:env(safe-area-inset-bottom)}
+#edDrawer[hidden]{display:none}
+#edDrawer.dim{opacity:.12;pointer-events:none}
+#edDrawer .dh{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#12151b;border-bottom:1px solid #2a303b}
+#edDrawer .db{padding:6px 12px 24px}
+#edDrawer .f{margin-top:10px}
+#edDrawer label{display:block;margin:0 0 4px;color:#8a93a3;font-size:12px;font-weight:600}
+#edDrawer label.chk{display:flex;align-items:center;gap:8px;margin:12px 0 0;color:#cfd6e2;font-size:13px}
+#edDrawer input,#edDrawer select,#edDrawer textarea{width:100%;margin:0;padding:9px 10px;border-radius:9px;border:1px solid #2a303b;background:#1d222b;color:#e8ecf3;font:14px system-ui;outline:none;-webkit-user-select:text;user-select:text}
+#edDrawer textarea{font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;resize:vertical}
+#edDrawer input[type=checkbox]{width:20px;height:20px;flex:none;padding:0}
+#edDrawer input[type=range]{padding:0}
+#edDrawer input[type=color]{padding:2px;height:34px;width:100%}
+#edDrawer .two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#edDrawer .clr{display:flex;gap:8px;align-items:center}
+#edDrawer .row{display:flex;gap:8px;align-items:center;margin-top:12px}.row.end{justify-content:flex-end}
+#edDrawer details{margin-top:14px;border-top:1px solid #2a303b;padding-top:8px}
+#edDrawer summary{color:#cfd6e2;font-weight:600;padding:4px 0}
+#edDrawer .note{margin-top:6px;color:#7d8696;font-size:12px}
+#edDrawer .err{color:#ff8a96;font-size:12px;min-height:14px}
+#edDrawer .sec{margin:16px 0 6px;color:#8a93a3;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+#edDrawer .prow{display:flex;gap:6px;align-items:center;padding:5px 0}.prow span{flex:1}.prow small{color:#3ddc84}
+#edDrawer .ilist{display:flex;flex-wrap:wrap;gap:6px}
+#edDrawer.left{right:auto;left:0;border-left:0;border-right:1px solid #2a303b}
